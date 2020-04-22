@@ -14,8 +14,8 @@
         <div class="row">
             <div class="offset-md-4 col-4 mt-3">
                 <li class="list-group-item active text-center">Private Chat</li>
-                <ul class="list-group" style="overflow-y: scroll; height: 200px;">
-                    <message v-for="chat in chat.messages" :key="chat.id">
+                <ul class="list-group" style="overflow-y: scroll; height: 200px;" v-chat-scroll>
+                    <message v-for="chat in chat.messages" :key="chat.id" color="warning">
                         @{{ chat }}
                     </message>
                 </ul>
